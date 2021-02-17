@@ -3,3 +3,7 @@ const each  =  (list, iteratee) => {
         iteratee(Object.values(list)[i], Object.keys(list)[i], list)
     }
 }
+
+module.exports = {
+    each
+}

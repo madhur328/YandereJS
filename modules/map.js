@@ -15,5 +15,6 @@ let map = (list, iteratee) => {
     return result;
 }
 
-var a = map({ one: "a", two: 2, three: 3 }, function (n) { return n * n });
-console.log(a)
+module.exports = {
+    map
+}
