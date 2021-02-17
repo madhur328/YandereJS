@@ -1,13 +1,14 @@
-const find = (list, func) => {
+const filter = (list, func) => {
+    var result = []
     const values = Object.values(list)
     for (var value of values) {
         if (func(value)) {
-            return value
+            result.push(value)
         }
     }
-    return undefined
+    return result
 }
 
 module.exports = {
-    find
+    filter
 }
