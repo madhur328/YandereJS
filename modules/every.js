@@ -1,7 +1,8 @@
 const every = (list, func) => {
     if (typeof func !== "function") return true
-    for (var elem of list) {
-        if (!func(elem)) {
+    values = Object.values(list)
+    for (var value of values) {
+        if (!func(value)) {
             return false
         }
     }
