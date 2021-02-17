@@ -1,16 +1,15 @@
 const findWhere = (list, properties) => {
     for (var i = 0; i < list.length; i++) {
-        let values = Object.values(list[i]);
-        let keys = Object.keys(list[i]);
-        let propValues = Object.values(properties);
-        let propKeys = Object.keys(properties);
-        for (var k = 0; k < keys.length; k++) {
-            for (var j = 0; j < propKeys.length; j++) {
-                if (keys[k] === propKeys[j] && values[k] === propValues[j])
-                    return list[i];
+        let listArr = Object.entries(list[i]);
+        let propArr = Object.entries(properties);
+        for (var j = 0; j < propArr.length; j++) {
+            for (var k = 0; k < listArr.length; k++) {
+                if (propArr[j][0] === listArr[k][0] &&
+                    propArr[j][1] === listArr[k][1]) { propArr.shift() }
+                else if (k === listArr.length - 1) { break }
             }
-
         }
+        if (propArr.length === 0) return list[i];
     }
 }
 
