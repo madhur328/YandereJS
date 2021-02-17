@@ -6,6 +6,4 @@ const _yandere = {
     map
 }
 
-module.exports = {
-    _yandere
-}
+module.exports = _yandere;

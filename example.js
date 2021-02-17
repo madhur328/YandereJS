@@ -1,8 +1,8 @@
-const { _yandere } = require('./index.js');
+const _yandere = require('./index.js');
 
 
 // Tests for package
-//for methos each
+//for methods each
 _yandere.each([1, 2, 3, 4], console.log);
 
 console.log("------");
