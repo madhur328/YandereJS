@@ -1,4 +1,4 @@
-let map = (list, iteratee) => {
+const map = (list, iteratee) => {
     let result = [];
     result.length = Object.keys(list).length;
     for (var i = 0; i < result.length; i++) {
