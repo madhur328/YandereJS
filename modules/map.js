@@ -6,3 +6,7 @@ let map = (list, iteratee) => {
     }
     return result;
 }
+
+module.exports = {
+    map
+}
