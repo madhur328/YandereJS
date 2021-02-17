@@ -1,4 +1,5 @@
-const findWhere = (list, properties) => {
+const where = (list, properties) => {
+    var result = [];
     for (var i = 0; i < list.length; i++) {
         let listArr = Object.entries(list[i]);
         let propArr = Object.entries(properties);
@@ -9,11 +10,11 @@ const findWhere = (list, properties) => {
                 else if (k === listArr.length - 1) { break }
             }
         }
-        if (propArr.length === 0) return list[i];
+        if (propArr.length === 0) result.push(list[i]);
     }
+    return result;
 }
 
 module.exports = {
-    findWhere
+    where
 }
-
