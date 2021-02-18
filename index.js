@@ -8,6 +8,7 @@ const { reduce } = require('./modules/reduce.js');
 const { reduceRight } = require('./modules/reduceRight.js');
 const { reject } = require('./modules/reject.js');
 const { some } = require('./modules/some.js');
+const { contains } = require('./modules/contains.js');
 
 
 const _yandere = {
@@ -21,7 +22,8 @@ const _yandere = {
     reduce,
     reduceRight,
     reject,
-    some
+    some,
+    contains,
 }
 
 module.exports = _yandere;
