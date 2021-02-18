@@ -1,6 +1,8 @@
-const reduce = (list, iteratee, memo) => {
-    for (var i = 0; i < Object.keys(list).length; i++) {
-        memo = iteratee(memo, Object.values(list)[i], Object.keys(list)[i], list)
+const reduce = (list, iteratee, memo = "undefined") => {
+    entries = Object.entries(list);
+    if (memo === "undefined") { memo = entries[0][1]; entries.shift() }
+    for (var entry of entries) {
+        memo = iteratee(memo, entry[1], entry[0], list)
     }
     return memo;
 }
