@@ -1,16 +1,16 @@
 const min = (list, iteratee = (listelem) => listelem) => {
-    value = Object.values(list)
+    let value = Object.values(list)
     let min = Infinity
-    let array = [Infinity]
+    let result = [Infinity]
     for (let elem of value) {
         let num = iteratee(elem)
         if (num < min) {
             min = num
-            array.pop()
-            array.push(elem)
+            result.pop()
+            result.push(elem)
         }
     }
-    return array.pop()
+    return result.pop()
 }
 
 
