@@ -2,7 +2,7 @@ const sample = (list, n) => {
     let result = []
     let values = Object.values(list)
     let num = Math.floor(Math.random() * values.length)
-    if (n === "undefined") return values.splice(num, 1)[0]
+    if (n === undefined) return values.splice(num, 1)[0]
     if (n <= 0) { return [] }
     if (n > values.length) { n = values.length }
     for (let i = 0; i < n; i++) {
