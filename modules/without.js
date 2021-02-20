@@ -1,7 +1,7 @@
 const { compact } = require("./compact.js")
 
 const without = (array, ...arg) => {
-    let result = array;
+    let result = Object.values(array);
     let n = result.length;
     for (var i = 0; i < arg.length; i++) {
         for (var j = 0; j < n; j++) {
