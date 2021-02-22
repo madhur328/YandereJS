@@ -1,10 +1,15 @@
-const reduce = (list, iteratee, memo = "undefined") => {
-    entries = Object.entries(list);
-    if (memo === "undefined") { memo = entries[0][1]; entries.shift() }
-    for (var entry of entries) {
-        memo = iteratee(memo, entry[1], entry[0], list)
+const reduce = (...args) => {
+    let [list, iteratee, memo] = args;
+    let i = 0;
+    entries = Object.entries(list)
+    if (args.length < 3) {
+        memo = list[0];
+        i++;
     }
-    return memo;
+    for (i; i < entries.length; i++) {
+        memo = iteratee(memo, entries[i][1], entries[i][0], list)
+    }
+    return memo
 }
 
 module.exports = {
@@ -20,5 +25,5 @@ var objectType5 = [objectType1, objectType2, objectType3, objectType4]
 
 
 const func = elem => elem.two
-var max_obj = reduce(objectType5, (x, y) => func(x) > func(y) ? x : y)
+var max_obj = reduce(objectType1, (num1, num2) => num1 * num2 ** 0.5)
 console.log(max_obj)
