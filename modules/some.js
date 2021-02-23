@@ -1,9 +1,11 @@
-const some = (list, func = elem => elem == true) => {
-    values = Object.values(list)
-    if (!values.length || typeof values.length !== "number") return false
-    if (typeof func !== "function") return false
-    for (var value of values) {
-        if (func(value)) {
+const some = (...args) => {
+    let [list, iteratee] = args
+    if (args.length < 2) {
+        iteratee = elem => elem
+    }
+    item_vals = Object.values(list)
+    for (var item_val of item_vals) {
+        if (iteratee(item_val)) {
             return true
         }
     }
@@ -13,3 +15,6 @@ const some = (list, func = elem => elem == true) => {
 module.exports = {
     some
 }
+
+let some_output = some([1, 2, 3, 4, 5, 6], elem => elem > 5)
+console.log(some_output)

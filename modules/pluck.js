@@ -1,7 +1,7 @@
 const pluck = (list, propertyName) => {
     let result = [];
-    let values = Object.values(list);
-    for (value of values) {
+    let item_vals = Object.values(list);
+    for (item_val of item_vals) {
         result.push(value[propertyName])
     }
     return result;

@@ -23,3 +23,4 @@ module.exports = {
 let listOfPlays = { one: { random_key: "random_value", author: "Shakespeare", year: 1611 }, two: { author: "Shakespeare", year: 1611 }, three: { author: "Madhur", year: 1611 }, four: { author: "Shakespeare", year: 2020 }, five: { author: "Madhur", year: 2020 } }
 let where_output = where(listOfPlays, { author: "Shakespeare", year: 1611 })
 console.log(where_output)
+
