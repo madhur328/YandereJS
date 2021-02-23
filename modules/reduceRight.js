@@ -15,3 +15,4 @@ const reduceRight = (...args) => {
 module.exports = {
     reduceRight
 }
+console.log(reduceRight([1, 2, 3, 4, 5], n => n % 7, 1))
