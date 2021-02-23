@@ -22,3 +22,15 @@ const flatten = (array, depth = Infinity) => {
 module.exports = {
     flatten
 }
+
+//flatten single depth
+const flatten2D = (arr2D) => {
+    arr1D = []
+    for (let elem of arr2D) {
+        if (Array.isArray(elem)) {
+            arr1D.push(...elem)
+        }
+        arr1D.push(elem)
+    }
+    return arr1D
+}
