@@ -1,8 +1,8 @@
 const compact = (list) => {
-    let items = Object.values(list);
     let result = []
-    for (let item of items) {
-        if (item) { result.push(item) }
+    let item_vals = Object.values(list);
+    for (let item_val of item_vals) {
+        if (item_val) { result.push(item_val) }
     }
     return result;
 }
