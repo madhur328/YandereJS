@@ -1,9 +1,6 @@
 const bind = (func, obj, args) => {
-    Function.prototype.mybind = function (obj, args) {
-        obj.fnName = this;
-        obj.arrow = () => obj.fnName(args);
-    }
-    func.mybind(obj, args);
+    obj.fnName = func;
+    obj.arrow = () => obj.fnName(args);
     return obj.arrow;
 }
 
