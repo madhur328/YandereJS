@@ -1,19 +1,26 @@
-const sample = (list, n) => {
+const sample = (...args) => {
+    let [list, n] = args
     let result = []
-    let values = Object.values(list)
-    let num = Math.floor(Math.random() * values.length)
-    if (n === undefined) return values.splice(num, 1)[0]
-    if (n <= 0) { return [] }
-    if (n > values.length) { n = values.length }
-    for (let i = 0; i < n; i++) {
-        result.push(values.splice(num, 1)[0])
-        num = Math.floor(Math.random() * values.length)
+    let item_vals = Object.values(list)
+    if (args.length < 2) {
+        rand_index = Math.floor(Math.random() * item_vals.length)
+        choosen_elem = item_vals[rand_index]
+        return choosen_elem
+    } else {
+        if (n > item_vals.length) { n = item_vals.length }
+        for (i = 0; i < n && n <= (item_vals.length + result.length); i++) {
+            rand_index = Math.floor(Math.random() * item_vals.length)
+            choosen_elem = item_vals[rand_index]
+            result.push(choosen_elem)
+            item_vals.splice(rand_index, 1)
+        }
+        return result
     }
-    return result
 }
 
 module.exports = {
     sample
 }
 
-console.log(sample([1, 2, 3, 4, 5]))
+let sample_output = sample([28, 32, 244, 923, 66], 1)
+console.log(sample_output)
