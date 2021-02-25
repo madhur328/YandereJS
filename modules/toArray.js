@@ -5,3 +5,6 @@ const toArray = (list) => {
 module.exports = {
     toArray
 }
+
+let toArrayOutput = toArray([1, 2])
+console.log(toArrayOutput)

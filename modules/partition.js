@@ -10,3 +10,8 @@ const partition = (list, predicate) => {
 module.exports = {
     partition
 }
+
+//Test
+let isOdd = num => num % 2 !== 0
+let partition_output = partition([0, 1, 2, 3, 4, 5], isOdd);
+console.log(partition_output)
