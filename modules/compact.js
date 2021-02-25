@@ -10,3 +10,7 @@ const compact = (list) => {
 module.exports = {
     compact
 }
+
+//Test
+let compactOutput = compact([0, 1, false, 2, '', 3]);
+console.log(compactOutput)

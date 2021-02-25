@@ -2,6 +2,7 @@ const sortBy = (list, iteratee) => {
     if (typeof iteratee === "string") { let str = iteratee; iteratee = elem => elem[str] }
     let item_vals = Object.values(list)
     let temp = null
+    //bubble sort algorithm
     for (let i = item_vals.length - 2; i >= 0; i--)
         for (let j = 0; j <= i; j++) {
             if (iteratee(item_vals[j]) > iteratee(item_vals[j + 1])) {
