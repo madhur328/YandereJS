@@ -1,5 +1,5 @@
-const isNull = (value) => {
-    return value === null
+const isNull = (object) => {
+    return object === null
 }
 
 module.exports = {
