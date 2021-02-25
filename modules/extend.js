@@ -1,4 +1,5 @@
 const { allKeys } = require('./allKeys.js');
+
 const extend = (destination, ...sources) => {
     for (var source of sources) {
         if (typeof source === "object") {
