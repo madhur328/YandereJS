@@ -10,7 +10,7 @@ module.exports = {
 }
 
 // Test 1   no arguments
-let initial_output = initial(1)
+let initial_output = initial("asd")
 console.log(initial_output)   // expected output: error
 
 // console.log("\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n")
