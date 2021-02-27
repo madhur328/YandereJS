@@ -17,8 +17,13 @@ module.exports = {
 }
 
 // Test 1   no arguments
+<<<<<<< HEAD
 let initial_output = initial([1, 2, 3, 4, 5, 6], 15)
 console.log(initial_output)   // expected output: []
+=======
+let initial_output = initial("asd")
+console.log(initial_output)   // expected output: error
+>>>>>>> 9ae3f8582574635cba36cde318c8f4a1f1e13676
 
 // console.log("\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n")
 
