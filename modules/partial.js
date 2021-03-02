@@ -13,3 +13,6 @@ const partial = (func, ...args) => {
 module.exports = {
     partial
 }
+// var subtract = function (a, b) { return b - a; };
+// sub20 = partial(subtract, '_', 20);
+// console.log(sub20(5));
